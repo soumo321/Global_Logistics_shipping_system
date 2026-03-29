@@ -1,0 +1,105 @@
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #0077b6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 22px;
+      font-weight: bold;
+      animation: fadeInLeft 1s ease;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      transition: max-height 0.5s ease;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+      opacity: 0;
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    .navbar ul li:nth-child(1) { animation-delay: 0.2s; }
+    .navbar ul li:nth-child(2) { animation-delay: 0.4s; }
+    .navbar ul li:nth-child(3) { animation-delay: 0.6s; }
+    .navbar ul li:nth-child(4) { animation-delay: 0.8s; }
+    .navbar ul li:nth-child(5) { animation-delay: 1s; }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .navbar ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: #90e0ef;
+      transition: width 0.3s ease;
+    }
+
+    .navbar ul li a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 700px) {
+      .navbar ul {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        background: #023e8a;
+      }
+      .navbar ul.show {
+        max-height: 300px;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .navbar ul li {
+        margin: 15px 0;
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
