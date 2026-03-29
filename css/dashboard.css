@@ -1,0 +1,47 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f4f6f8;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Cards */
+.status-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.pending { background: orange; }
+.transit { background: blue; }
+.delivered { background: green; }
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #333;
+  color: white;
+}
