@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/shipment.css">
+<script src="js/shipment.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="card">
+        <h2>Shipment Order</h2>
+        
+        <form id="shipmentForm">
+            <div class="form-group">
+                <label for="origin">Origin</label>
+                <input type="text" id="origin" placeholder="e.g., Shanghai, Port" required>
+            </div>
+
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" id="destination" placeholder="e.g., Los Angeles, Port" required>
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight</label>
+                <div class="weight-wrapper">
+                    <input type="number" id="weight" step="0.1" min="0.1" placeholder="0.0" required>
+                    <span class="weight-unit">kg</span>
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn">Submit Shipment</button>
+        </form>
+
+        <div id="errorMessage" class="message error-message"></div>
+        <div id="successMessage" class="message success-message">
+            ✅ Shipment created!<br>
+            Tracking ID: <strong id="trackingIdDisplay"></strong>
+        </div>
+    </div>
+
+    <script>
+       
+    </script>
+
+    
+</body>
+</html>
